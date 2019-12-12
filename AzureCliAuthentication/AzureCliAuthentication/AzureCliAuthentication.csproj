@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Authors>Phil Peters</Authors>
+    <Company />
+    <Product />
   </PropertyGroup>
 
   <ItemGroup>

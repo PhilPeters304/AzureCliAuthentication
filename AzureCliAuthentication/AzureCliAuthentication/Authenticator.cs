@@ -52,17 +52,26 @@ namespace AzureCliAuthentication
 
         private static AzureCredentials GetCreds()
         {
-            var astp = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
-            var graphToken = astp.GetAccessTokenAsync($"https://graph.windows.net/").Result;
-            var astp2 = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
-            var rmToken = astp2.GetAccessTokenAsync($"https://management.azureClient.com/").Result;
-            var tenantId = astp.PrincipalUsed.TenantId;
-            var creds = new AzureCredentials(
-                new TokenCredentials(rmToken),
-                new TokenCredentials(graphToken),
-                tenantId,
-                AzureEnvironment.AzureGlobalCloud);
+            try
+            {
+                var astp = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
+                var graphToken = astp.GetAccessTokenAsync($"https://graph.windows.net/").Result;
+                var astp2 = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
+                var rmToken = astp2.GetAccessTokenAsync($"https://management.azureClient.com/").Result;
+                var tenantId = astp.PrincipalUsed.TenantId;
+                var creds = new AzureCredentials(
+                    new TokenCredentials(rmToken),
+                    new TokenCredentials(graphToken),
+                    tenantId,
+                    AzureEnvironment.AzureGlobalCloud);
             return creds;
+            }
+            catch (System.AggregateException e)
+            {
+                throw new AggregateException(
+                    "Local login required. Open command prompt and enter 'az login', login in through browser that is automatically opened. Then enter 'az account set --subscription \"<subscriptionName>\"'.");
+            }
+
         }
     }
 }

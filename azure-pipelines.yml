@@ -13,6 +13,7 @@ steps:
   inputs:
     command: 'build'
     projects: '**/AzureCliAuthentication.csproj'
+    workingDirectory: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
   inputs:

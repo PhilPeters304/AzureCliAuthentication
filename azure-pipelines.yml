@@ -16,16 +16,13 @@ steps:
     workingDirectory: '$(Build.ArtifactStagingDirectory)'
     arguments: '--configuration $(buildConfiguration)'
 
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
     packagesToPack: '**/AzureCliAuthentication.csproj'
+    nobuild: true
     versioningScheme: 'off'
-    includeReferencedProjects: true
-    majorVersion: $(Major)
-    minorVersion: $(Minor)
-    patchVersion: $(Patch)
-
+    buildProperties: 'PackageVersion=$(Version)'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'push'

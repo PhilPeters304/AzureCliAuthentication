@@ -5,6 +5,12 @@
     <Authors>Phil Peters</Authors>
     <Company />
     <Product />
+    <Description>A library to enable Azure CLI authentication for local and pipeline development</Description>
+    <PackageLicenseUrl>https://github.com/PhilPeters304/AzureCliAuthentication/blob/master/license.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/PhilPeters304/AzureCliAuthentication</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PhilPeters304/AzureCliAuthentication</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>Azure Authentication</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

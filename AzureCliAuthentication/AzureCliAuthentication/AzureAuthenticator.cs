@@ -8,7 +8,7 @@ using Microsoft.Rest;
 
 namespace AzureCliAuthentication
 {
-    public class Authenticator
+    public class AzureAuthenticator
     {
         /// <summary>
         /// Will return a set of Azure credentials you can pass to create new Azure clients. 

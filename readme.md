@@ -4,6 +4,9 @@ This library will remove the need to use Service Principal credentials in C# to 
 
 If you use Azure DevOps you can use the Az Cli step to using [Service Connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal) to execute your dll. This means you can call C# as easily as you'd call PowerShell while keeping your Service Principal credentials secure. 
 
+## Build Status
+[![Build Status](https://dev.azure.com/simplymadesoftware/CSharp/_apis/build/status/PhilPeters304.AzureCliAuthentication?branchName=master)](https://dev.azure.com/simplymadesoftware/CSharp/_build/latest?definitionId=15&branchName=master)
+
 ## How to use 
 
 ### Login

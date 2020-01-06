@@ -57,7 +57,7 @@ namespace AzureCliAuthentication
                 var astp = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
                 var graphToken = astp.GetAccessTokenAsync($"https://graph.windows.net/").Result;
                 var astp2 = new AzureServiceTokenProvider("RunAs=Developer;DeveloperTool=AzureCli");
-                var rmToken = astp2.GetAccessTokenAsync($"https://management.azureClient.com/").Result;
+                var rmToken = astp2.GetAccessTokenAsync($"https://management.azure.com/").Result;
                 var tenantId = astp.PrincipalUsed.TenantId;
                 var creds = new AzureCredentials(
                     new TokenCredentials(rmToken),

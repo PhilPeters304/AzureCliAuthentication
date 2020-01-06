@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureCliAuthentication", "AzureCliAuthentication\AzureCliAuthentication.csproj", "{493245B4-A1AB-40E3-A779-ED1D7046E39E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCliAuthentication", "AzureCliAuthentication\AzureCliAuthentication.csproj", "{493245B4-A1AB-40E3-A779-ED1D7046E39E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureCliAuthentication.Example", "AzureCliAuthentication.Example\AzureCliAuthentication.Example.csproj", "{E27BF431-A60B-4457-9833-8A94AA3DBB10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureCliAuthentication.Example", "AzureCliAuthentication.Example\AzureCliAuthentication.Example.csproj", "{E27BF431-A60B-4457-9833-8A94AA3DBB10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureCliAuthentication.Runner", "AzureCliAuthentication.Runner\AzureCliAuthentication.Runner.csproj", "{038295BD-0226-4EEE-B7F1-845BDE00752A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E27BF431-A60B-4457-9833-8A94AA3DBB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E27BF431-A60B-4457-9833-8A94AA3DBB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E27BF431-A60B-4457-9833-8A94AA3DBB10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{038295BD-0226-4EEE-B7F1-845BDE00752A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038295BD-0226-4EEE-B7F1-845BDE00752A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038295BD-0226-4EEE-B7F1-845BDE00752A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038295BD-0226-4EEE-B7F1-845BDE00752A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

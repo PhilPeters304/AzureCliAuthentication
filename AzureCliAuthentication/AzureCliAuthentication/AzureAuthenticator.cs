@@ -44,7 +44,7 @@ namespace AzureCliAuthentication
                 {
                     throw new Exception($"Could not find subscription named {subscriptionInfo}; Subscriptions listed were {string.Join(",", subscriptions)}.");
                 }
-                azure = Azure.Authenticate(creds).WithSubscription(subscriptionInfo);
+                azure = Azure.Authenticate(creds).WithSubscription(subscription.SubscriptionId);
             }
 
             return azure;

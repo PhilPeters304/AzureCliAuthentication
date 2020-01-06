@@ -7,7 +7,7 @@ namespace AzureCliAuthentication.Example
 {
     public class Example
     {
-        private readonly string _subscriptionName = "My Subscription Name";
+        private readonly string _subscriptionName = "My Subscription";
 
         public void UsingAzureFluentClient()
         {
@@ -31,7 +31,10 @@ namespace AzureCliAuthentication.Example
                 Console.WriteLine($"I found resource group {resourceGroup.Name} in subscription {_subscriptionName}");
             }
 
-            var resourceManagementClient = new ResourceManagementClient(azureCredentials);
+            var resourceManagementClient = new ResourceManagementClient(azureCredentials)
+            {
+                SubscriptionId = azureFluent.SubscriptionId
+            };
             var resources = resourceManagementClient.Resources.List();
             foreach (var resource in resources)
             {

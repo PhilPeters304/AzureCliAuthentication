@@ -9,6 +9,8 @@ namespace AzureCliAuthentication.Runner
             var example = new Example.Example();
             example.UsingAzureCredentials();
             example.UsingAzureFluentClient();
+            Console.WriteLine("Press enter to continue");
+            Console.ReadLine(); 
         }
     }
 }
